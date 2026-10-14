@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+    <title>IPACE — Running App | Corrida, Comunidade e Performance</title>
+    <meta name="description" content="IPACE: registre corridas e caminhadas, crie rotas, participe de eventos presenciais e remotos e evolua com análise de desempenho por IA."/>
+    <meta name="theme-color" content="#D2262E"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+    <meta name="apple-mobile-web-app-title" content="IPACE"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+    <link rel="manifest" href="/manifest.webmanifest"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="IPACE"/>
+    <meta property="og:title" content="IPACE — Running App"/>
+    <meta property="og:description" content="Registre corridas e caminhadas, crie rotas, participe de eventos e evolua com análise de desempenho por IA. Sua comunidade de corrida em um só lugar."/>
+    <meta property="og:url" content="https://ipace.app/"/>
+    <meta property="og:image" content="https://ipace.app/og-image.png"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta property="og:locale" content="pt_BR"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="IPACE — Running App"/>
+    <meta name="twitter:description" content="Registre corridas, crie rotas, participe de eventos e evolua com IA. Sua comunidade de corrida em um só lugar."/>
+    <meta name="twitter:image" content="https://ipace.app/og-image.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script>
+      // Suppress benign Vite HMR WebSocket closing errors in iframe/preview environment
+      window.addEventListener('error', function(e) {
+        if (e.message && (e.message.indexOf('WebSocket') !== -1 || e.filename && e.filename.indexOf('@vite/client') !== -1)) {
+          e.stopImmediatePropagation();
+        }
+      }, true);
+      window.addEventListener('unhandledrejection', function(e) {
+        if (e.reason && (String(e.reason.message || e.reason).indexOf('WebSocket') !== -1)) {
+          e.preventDefault();
+        }
+      });
+    </script>
+  </head>
+  <body class="bg-[#F7F5F2] text-[#121212] antialiased selection:bg-[#D2262E] selection:text-white transition-colors duration-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

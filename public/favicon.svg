@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+    <linearGradient id="watercolorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E4575E" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#D2262E" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#121212" stop-opacity="0.85"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rotated rounded square badge (-6deg) -->
+  <g transform="rotate(-6 60 60)">
+    <!-- Outer thick red border -->
+    <rect x="10" y="10" width="100" height="100" rx="22" ry="22" fill="#F7F5F2" stroke="#D2262E" stroke-width="8" filter="url(#shadow)"/>
+    
+    <!-- Watercolor splashes behind the runner -->
+    <path d="M 28 42 C 22 36, 18 48, 25 54 C 20 60, 24 72, 34 68 C 30 76, 44 82, 48 74 C 54 80, 68 76, 62 66 C 70 60, 64 46, 56 48 C 54 38, 40 36, 36 44 Z" fill="#F3BFC3" opacity="0.65" />
+    <path d="M 34 46 C 28 42, 26 50, 32 56 C 28 62, 34 70, 42 66 C 40 72, 50 74, 54 68 C 58 72, 66 68, 62 60 C 66 54, 60 46, 52 48 Z" fill="#E4575E" opacity="0.75" />
+    
+    <!-- Dynamic watercolor splatters -->
+    <circle cx="24" cy="38" r="2.5" fill="#D2262E" opacity="0.8"/>
+    <circle cx="20" cy="52" r="3.2" fill="#E4575E" opacity="0.7"/>
+    <circle cx="28" cy="72" r="2.8" fill="#D2262E" opacity="0.8"/>
+    <circle cx="38" cy="80" r="2.2" fill="#121212" opacity="0.6"/>
+    <circle cx="58" cy="78" r="2.5" fill="#D2262E" opacity="0.7"/>
+    <circle cx="68" cy="40" r="1.8" fill="#D2262E" opacity="0.6"/>
+
+    <!-- Runner silhouette (forward lean, dynamic sprinting posture) -->
+    <!-- Head -->
+    <circle cx="72" cy="38" r="6" fill="#121212"/>
+    <!-- Torso -->
+    <path d="M 68 44 C 62 48, 52 56, 50 64 C 55 64, 60 62, 65 58 C 70 54, 72 48, 68 44 Z" fill="url(#watercolorGrad)"/>
+    <!-- Back trail & ribs -->
+    <path d="M 52 52 C 42 50, 34 54, 38 60 C 44 64, 50 62, 54 60 Z" fill="#D2262E"/>
+    <!-- Forward Arm -->
+    <path d="M 67 48 L 78 52 L 86 44" stroke="#121212" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <!-- Backward Arm -->
+    <path d="M 58 50 L 46 54 L 38 62" stroke="#121212" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <!-- Forward Leg (bent high knee) -->
+    <path d="M 58 62 L 72 68 L 68 84" stroke="#121212" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <!-- Forward Foot splash -->
+    <path d="M 66 83 L 73 85" stroke="#D2262E" stroke-width="4" stroke-linecap="round"/>
+    <!-- Backward Leg (trailing kick) -->
+    <path d="M 52 64 L 40 74 L 32 84" stroke="url(#watercolorGrad)" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <!-- Back Foot splash -->
+    <path d="M 31 83 L 26 86" stroke="#D2262E" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>

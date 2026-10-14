@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+:root {
+  --ipace-primary: #D2262E;
+  --ipace-hover: #B01E25;
+  --ipace-active: #8F171D;
+  --ipace-soft: #FBE9EA;
+  --ipace-watercolor: #E4575E;
+  --ipace-splash: #F3BFC3;
+  --ipace-bg: #F7F5F2;
+  --ipace-surface: #FFFFFF;
+  --ipace-surface-2: #F1EEE8;
+  --ipace-text: #121212;
+  --ipace-text-2: #5F5B57;
+  --ipace-border: #E6E2DB;
+  --ipace-success: #1E7E34;
+  --ipace-warning: #9A5B00;
+  --ipace-error: #A81C24;
+  --ipace-info: #1D4ED8;
+}
+
+[data-theme="dark"] {
+  --ipace-primary: #E63946;
+  --ipace-hover: #F0555E;
+  --ipace-active: #C22E39;
+  --ipace-soft: #3A1C1F;
+  --ipace-watercolor: #E4575E;
+  --ipace-splash: #5A2024;
+  --ipace-bg: #131111;
+  --ipace-surface: #1D1A1A;
+  --ipace-surface-2: #262222;
+  --ipace-text: #F5F2EF;
+  --ipace-text-2: #B7B0AA;
+  --ipace-border: #383232;
+  --ipace-success: #4CBB6C;
+  --ipace-warning: #E0A100;
+  --ipace-error: #FF6B70;
+  --ipace-info: #7AA7FF;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--ipace-bg);
+  color: var(--ipace-text);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Poppins', 'Inter', system-ui, sans-serif;
+}
+
+/* Custom token helper classes */
+.bg-theme-bg { background-color: var(--ipace-bg); }
+.bg-theme-surface { background-color: var(--ipace-surface); }
+.bg-theme-surface-2 { background-color: var(--ipace-surface-2); }
+.bg-theme-primary { background-color: var(--ipace-primary); }
+.bg-theme-soft { background-color: var(--ipace-soft); }
+.text-theme-text { color: var(--ipace-text); }
+.text-theme-text-2 { color: var(--ipace-text-2); }
+.text-theme-primary { color: var(--ipace-primary); }
+.border-theme-border { border-color: var(--ipace-border); }
+.border-theme-primary { border-color: var(--ipace-primary); }
+
+/* Accessible focus outline */
+:focus-visible {
+  outline: 2px solid var(--ipace-primary);
+  outline-offset: 2px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--ipace-border);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ipace-text-2);
+}
+
+/* Leaflet map styles container */
+.leaflet-container {
+  font-family: inherit;
+  z-index: 10;
+  border-radius: 16px;
+}
+
+.badge-tilt {
+  transform: rotate(-3deg);
+}
+
+.card-tilt {
+  transform: rotate(-1.5deg);
+  transition: transform 0.2s ease;
+}
+.card-tilt:hover {
+  transform: rotate(0deg) scale(1.01);
+}

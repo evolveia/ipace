@@ -1,0 +1,6 @@
+{
+  "name": "IPACE — Running App",
+  "description": "Aplicativo web de corrida e caminhada com rede social, rotas interativas, eventos presenciais e remotos, marketplace de serviços e análise esportiva por IA.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
