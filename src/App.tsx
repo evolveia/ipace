@@ -15,7 +15,7 @@ import { PrivacyPolicyScreen } from './components/legal/PrivacyPolicyScreen';
 import { Header } from './components/layout/Header';
 import { Sidebar } from './components/layout/Sidebar';
 import { BottomNav } from './components/layout/BottomNav';
-import { PWAInstallPrompt } from './components/pwa/PWAInstallPrompt';
+
 
 // Screens
 import { HomeScreen } from './components/home/HomeScreen';
@@ -74,13 +74,12 @@ function MainApp() {
   if (!isAuthenticated) {
     return (
       <>
-        <PWAInstallPrompt />
         <LoginScreen
-          onOpenRegister={() => setIsRegisterOpen(true)}
-          onOpenForgotPassword={() => setIsForgotOpen(true)}
-          onOpenTerms={() => setLegalView('terms')}
-          onOpenPrivacy={() => setLegalView('privacy')}
-        />
+        onOpenRegister={() => setIsRegisterOpen(true)}
+        onOpenForgotPassword={() => setIsForgotOpen(true)}
+        onOpenTerms={() => setLegalView('terms')}
+        onOpenPrivacy={() => setLegalView('privacy')}
+      />
 
         <RegisterModal
           isOpen={isRegisterOpen}
@@ -224,8 +223,6 @@ function MainApp() {
         }}
       />
 
-      {/* PWA Mobile Installation Prompt */}
-      <PWAInstallPrompt />
     </div>
   );
 }

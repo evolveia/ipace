@@ -35,9 +35,10 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
     const checkSession = async () => {
       try {
-        // As requested: start the application on the login screen
-        setUser(null);
-        localStorage.removeItem('ipace_session_active');
+        // As requested: start on home screen on every access
+        const profile = await StorageService.getProfile();
+        setUser(profile);
+        localStorage.setItem('ipace_session_active', 'true');
       } catch (err) {
         console.error('Failed to load session', err);
       } finally {
